@@ -1,0 +1,10 @@
+
+To use this package, first download hMETIS from 
+	http://glaros.dtc.umn.edu/gkhome/metis/hmetis/download 
+and untar it. This library was tested using hMETIS 1.5.
+
+To compile this package:
+  mpicc -g  -std=c99 driver.c par_mult.c -DNO_TIMING  -lm -Lhmetis -lhmetis -Wall -o driver
+
+The flag -DNO_TIMING specifies that no timing measurements should be taken.
+hMETIS is linked in with -lhmetis
